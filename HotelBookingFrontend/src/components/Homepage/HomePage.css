@@ -1,0 +1,256 @@
+/* HomePage.css */
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+/* .navbar {
+    background-color: transparent !important; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease; 
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.7) !important; 
+}
+
+.navbar-brand,
+.nav-link {
+    color: #fff !important; 
+}
+
+.nav-link:hover {
+    color: #ff6f61 !important; 
+} */
+
+
+
+
+
+
+
+
+/* Homepage Container Styles */
+.homepage-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('/src/assets/9.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+.homepage-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.homepage-container>* {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Styles */
+.header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    animation: fadeInDown 2s ease-in-out;
+    text-transform: uppercase;
+    text-shadow: 15px 8px 10px black;
+    letter-spacing: 30px;
+    color: #fff;
+}
+
+.header p {
+    font-size: 1.5rem;
+    color: #fff;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* About Section Styles */
+.about {
+    margin: 40px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section Styles */
+.services {
+    margin: 40px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services ul li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+/* Call to Action Section Styles */
+.cta {
+    margin: 40px 0;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta .btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #ff6f61;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta .btn:hover {
+    background-color: #ff3b2f;
+}
+
+
+
+/* Button */
+/* CSS for the button */
+.buttonExplore button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 2px solid white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    margin-top: 10rem;
+}
+
+/* Hover effect */
+.buttonExplore button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Active effect */
+.buttonExplore button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Add a glowing effect on hover */
+.buttonExplore button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    pointer-events: none;
+}
+
+.buttonExplore button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Optional: Add an icon or arrow to the button */
+.buttonExplore button::after {
+    content: '→';
+    /* Add an arrow */
+    margin-left: 10px;
+    /* Space between text and arrow */
+    transition: margin-left 0.3s ease;
+    /* Smooth transition for arrow */
+}
+
+.buttonExplore button:hover::after {
+    margin-left: 15px;
+    /* Move arrow further on hover */
+}
+
+
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
